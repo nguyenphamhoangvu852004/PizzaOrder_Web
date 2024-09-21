@@ -1,0 +1,253 @@
+/* HEADER */
+.fixed-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #ffffff;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.fixed-navbar.scrolled {
+    background-color: #f8f9fa;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.navbar {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    transition: padding 0.3s ease;
+}
+
+.navbar-logo {
+    width: 120px;
+    max-height: 70px;
+    transition: transform 0.3s ease;
+}
+
+.navbar-logo:hover {
+    transform: scale(1.05);
+}
+
+.navbar-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin-left: 15px;
+    background-color: #f1f1f1;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-button {
+    background-color: #e0e0e0;
+}
+
+.cart-button {
+    background-color: #e5e5e5;
+}
+
+.navbar-button img {
+    width: 28px;
+    height: 28px;
+    transition: opacity 0.3s ease;
+}
+
+.navbar-button:hover {
+    background-color: #f0c02f;
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-button:hover img {
+    opacity: 0.8;
+}
+
+/* BODY */
+.main-content {
+    margin-top: 80px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    min-height: calc(100vh - 160px); /* Adjust to ensure footer is always visible */
+    transition: padding 0.3s ease;
+}
+
+/* FOOTER */
+.footer {
+    background: #333;
+    padding: 40px 20px;
+    color: #fff;
+    margin-top: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.footer-left,
+.footer-middle,
+.footer-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.footer-logo {
+    width: 140px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.footer-logo:hover {
+    transform: scale(1.1);
+}
+
+.footer-hotline p {
+    margin: 0;
+    font-size: 14px;
+    text-align: center;
+}
+
+.hotline-number {
+    font-size: 18px;
+    font-weight: bold;
+    color: #f0c02f;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.footer-middle {
+    align-items: center;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    transition: opacity 0.3s ease;
+}
+
+.footer-links:hover {
+    opacity: 0.8;
+}
+
+.footer-links a {
+    color: #ddd;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #f0c02f;
+    transform: translateY(-3px);
+}
+
+.footer-right {
+    align-items: center;
+    text-align: center;
+}
+
+.footer-social {
+    margin-bottom: 20px;
+}
+
+.footer-social a {
+    margin-right: 20px;
+}
+
+.footer-social img {
+    width: 35px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.footer-social img:hover {
+    transform: scale(1.2);
+    filter: brightness(1.2);
+}
+
+.footer-payment img {
+    width: 70px;
+    margin-right: 20px;
+}
+
+.footer-language button {
+    background-color: #f0c02f;
+    color: #333;
+    border: none;
+    padding: 12px 24px;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-language button:hover {
+    background-color: #ddd;
+    transform: scale(1.05);
+}
+
+/* RESPONSIVE */
+@media (min-width: 768px) {
+    .footer-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .footer-left,
+    .footer-middle,
+    .footer-right {
+        align-items: flex-start;
+        text-align: left;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-logo {
+        width: 100px;
+    }
+
+    .navbar-button {
+        width: 40px;
+        height: 40px;
+        margin-left: 10px;
+    }
+
+    .footer-logo {
+        width: 120px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer-social a {
+        margin-right: 10px;
+    }
+}

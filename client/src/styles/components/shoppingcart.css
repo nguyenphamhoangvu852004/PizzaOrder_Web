@@ -1,0 +1,260 @@
+/* CSS cho màn hình rộng (desktop) */
+.cart-container {
+    display: flex;
+    gap: 30px;
+    padding: 20px;
+    background-color: #f4f4f9;
+    border-radius: 10px;
+}
+
+.list-products {
+    flex: 2;
+}
+
+.product-detail {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.product-detail:hover {
+    transform: translateY(-5px);
+}
+
+.product-detail img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.product-info {
+    flex: 1;
+}
+
+.product-name {
+    font-size: 1.4em;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.product-price {
+    color: #e53935;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.quantity-control button {
+    width: 36px;
+    height: 36px;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.5em;
+    transition: background-color 0.2s;
+}
+
+.quantity-control button:hover {
+    background-color: #e0e0e0;
+}
+
+.quantity-control span {
+    margin: 0 15px;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.remove-btn {
+    background-color: #ff5252;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s;
+}
+
+.remove-btn:hover {
+    background-color: #e64a19;
+}
+
+.cart-summary {
+    flex: 1;
+    background-color: #f9f9f9;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.total {
+    margin-bottom: 30px;
+}
+
+.total h3 {
+    font-size: 1.4em;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.total p {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #e53935;
+}
+
+.option {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.option button {
+    padding: 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    flex: 1;
+    width: 100%;
+}
+
+.remove-all-btn {
+    background-color: #d9534f;
+    color: white;
+}
+
+.remove-all-btn:hover {
+    background-color: #c9302c;
+}
+
+.continue-btn {
+    background-color: #4caf50;
+    color: white;
+}
+
+.continue-btn:hover {
+    background-color: #388e3c;
+}
+
+.checkout-btn {
+    background-color: #2196f3;
+    color: white;
+}
+
+.checkout-btn:hover {
+    background-color: #1976d2;
+}
+
+.option button:active {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* CSS cho màn hình nhỏ (điện thoại) */
+@media screen and (max-width: 768px) {
+    .cart-container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .product-detail {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+
+    .product-detail img {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 10px;
+    }
+
+    .product-info {
+        width: 100%;
+    }
+
+    .product-name {
+        font-size: 1.1em;
+        margin-bottom: 5px;
+    }
+
+    .product-price {
+        font-size: 1.1em;
+    }
+
+    .quantity-control {
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .quantity-control button {
+        width: 32px;
+        height: 32px;
+        font-size: 1.3em;
+    }
+
+    .quantity-control span {
+        margin: 0 10px;
+    }
+
+    .remove-btn {
+        padding: 8px 12px;
+        font-size: 1em;
+    }
+
+    .cart-summary {
+        margin-top: 20px;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .total h3 {
+        font-size: 1.2em;
+        margin-bottom: 10px;
+    }
+
+    .total p {
+        font-size: 1.5em;
+    }
+
+    .option {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .option button {
+        padding: 10px;
+        font-size: 1em;
+        width: 100%;
+        /* Đảm bảo nút chiếm toàn bộ chiều rộng */
+    }
+
+    .remove-all-btn {
+        font-size: 1em;
+        padding: 10px 20px;
+        width: 100%;
+        /* Đảm bảo nút chiếm toàn bộ chiều rộng */
+    }
+
+
+
+}

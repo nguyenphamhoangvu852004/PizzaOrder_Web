@@ -1,0 +1,65 @@
+.card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #ffffff;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-image {
+    margin-top: 15px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    overflow: hidden;
+}
+
+.card-image figure img {
+    border-radius: 15px 15px 0 0;
+    transition: transform 0.3s ease;
+}
+
+.card-image figure img:hover {
+    transform: scale(1.1);
+}
+
+.card-content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.card-footer {
+    background-color: #f9f9f9;
+    border-top: 1px solid #e0e0e0;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    overflow: hidden;
+}
+
+.card-footer-item {
+    color: #555555;
+    padding: 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.card-footer-item:hover {
+    background-color: #ff5722;
+    color: #ffffff;
+    border-radius: 0;
+}
+
+.loading-message {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    /* Adjust font size as needed */
+    color: #333;
+    /* Change to your desired color */
+    font-weight: bold;
+    /* Make the text bold */
+}
